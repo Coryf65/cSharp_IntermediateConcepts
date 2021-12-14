@@ -1,6 +1,5 @@
 public static class ExtensionMethods
 {
-
     public static void Example1()
     {
         int[] array = { 1, 5, 66, 84, 10, 55, 98, 48, 18, 74, 3, 4, 7, 80, 64, 101, 8, 24, 19};
