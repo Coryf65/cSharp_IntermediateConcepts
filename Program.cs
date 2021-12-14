@@ -8,3 +8,5 @@ LinqExamples.Example3();
 ExtensionMethods.Example1();
 
 ExtendClasses.Example1();
+
+Generics.Example1();
