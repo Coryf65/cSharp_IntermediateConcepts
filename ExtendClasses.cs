@@ -4,6 +4,8 @@ public static class ExtendClasses
 {
     public static void Example1()
     {
+        Console.WriteLine($"ExtendClasses, Example 1");
+
         // example of when you want to extend a class you cannot access or change
         Point pointOne = new(20, 30);
         Point pointTwo = new(10, 15);

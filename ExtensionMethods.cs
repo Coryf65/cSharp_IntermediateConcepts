@@ -4,6 +4,8 @@ public static class ExtensionMethods
     {
         int[] array = { 1, 5, 66, 84, 10, 55, 98, 48, 18, 74, 3, 4, 7, 80, 64, 101, 8, 24, 19};
 
+        Console.WriteLine($"ExtensionMethods, Example 1");
+
         Console.WriteLine("Bubble sort using a function");
         // a version of bubble sort
         BubbleSortFunction(array);

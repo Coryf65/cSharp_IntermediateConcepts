@@ -4,7 +4,7 @@ public static class LinqExamples
 {
     public static void Example1()
     {
-        Console.WriteLine($"Examples1, Running LINQ \n");
+        Console.WriteLine($"LinqExamples, Example1 Running LINQ \n");
         
         // Linq and Lambdas
         int[] numbers = { 5, 6, 3, 2, 1, 5, 6, 4, 7, 8, 9, 2554, 254, 54, 14, 655, 7, 4, 3, 5, 6, 58 };
@@ -30,7 +30,7 @@ public static class LinqExamples
     {
         string[] catNames = { "Lucky", "Bella", "MrBig", "Ivan", "Meeka", "Fuzzball", "Oreo", "Squeaky" };
 
-        Console.WriteLine($"Example2, Linq conditions \n");
+        Console.WriteLine($"LinqExamples, Example2 Linq conditions \n");
 
         // all
         var catsWithA = from cats in catNames
@@ -50,7 +50,7 @@ public static class LinqExamples
 
     public static void Example3()
     {
-        Console.WriteLine($"Example3, Linq with Objects \n");
+        Console.WriteLine($"LinqExamples, Example3 Linq with Objects \n");
 
         List<Person> people = new()
         {

@@ -10,3 +10,5 @@ ExtensionMethods.Example1();
 ExtendClasses.Example1();
 
 Generics.Example1();
+
+GenericSortingMethod.Example1();

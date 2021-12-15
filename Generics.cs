@@ -2,7 +2,7 @@ public static class Generics
 {
     public static void Example1()
     {
-        Console.WriteLine("Generics");
+        Console.WriteLine("Generics, Example1");
         
         Console.WriteLine($"Comparing ints");
         Console.WriteLine($"Are 1 and 2 equal ? {AreEqual(1, 2)}");
