@@ -13,3 +13,4 @@ GenericSortingMethod.Example1();
 CompareableInterface.Example1();
 
 GenericClass.Example1();
+GenericClass.Example2();

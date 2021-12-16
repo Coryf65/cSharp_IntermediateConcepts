@@ -21,8 +21,32 @@ public static class GenericClass
         Console.WriteLine($"Count {myints.Count}");
 
         Console.WriteLine($"Now we want to display items in the list");
-        
+        Console.WriteLine($"at position 2 {myints[2]}");
+    }
 
-        
+    public static void Example2()
+    {
+        Console.WriteLine("GenericClass, Example 2");
+
+        MyList<int> listInts1 = new();
+        MyList<int> listInts2 = new();
+
+        listInts1.Add(45);
+        listInts1.Add(50);
+        listInts1.Add(78);
+        listInts1.Add(45);
+        listInts1.Add(88);
+
+        listInts2.Add(1);
+        listInts2.Add(4);
+        listInts2.Add(10);
+        listInts2.Add(26);
+        listInts2.Add(8);
+
+        MyList<int> combinedLists = listInts1 + listInts2;
+        Console.WriteLine($"tostring {combinedLists.ToString()}");
+            
+        //Console.WriteLine($"cory string {combinedLists.CoryString(combinedLists)}");
+
     }
 }
