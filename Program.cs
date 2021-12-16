@@ -6,11 +6,10 @@ LinqExamples.Example2();
 LinqExamples.Example3();
 
 ExtensionMethods.Example1();
-
 ExtendClasses.Example1();
 
 Generics.Example1();
-
 GenericSortingMethod.Example1();
-
 CompareableInterface.Example1();
+
+GenericClass.Example1();
