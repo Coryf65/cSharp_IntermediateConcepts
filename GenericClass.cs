@@ -20,6 +20,9 @@ public static class GenericClass
         Console.WriteLine($"Capacity {myints.Capacity}");
         Console.WriteLine($"Count {myints.Count}");
 
+        Console.WriteLine($"Now we want to display items in the list");
+        
+
         
     }
 }

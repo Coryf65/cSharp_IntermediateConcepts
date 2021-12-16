@@ -3,6 +3,17 @@ public class MyList<T>
 {
     public int Count { get => count; private set => count = value; }
     public int Capacity { get => capacity; private set => capacity = value; }
+    
+    // asking for int called index
+    public T this[int index]
+    {
+        // this is this current list
+        get
+        {
+            // getting element at position
+            return this.items[index];
+        }
+    }
 
     private T[] items;
     private int count;
@@ -28,7 +39,7 @@ public class MyList<T>
 
             Array.Copy(clone, 0, this.items, 0, clone.Length);
         }
-                
+
         // adding item to list
         this.items[this.count] = item;
         this.count++;
