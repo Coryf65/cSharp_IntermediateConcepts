@@ -12,3 +12,5 @@ ExtendClasses.Example1();
 Generics.Example1();
 
 GenericSortingMethod.Example1();
+
+CompareableInterface.Example1();
