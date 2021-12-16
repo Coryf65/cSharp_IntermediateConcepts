@@ -26,7 +26,7 @@ public static class GenericClass
 
     public static void Example2()
     {
-        Console.WriteLine("GenericClass, Example 2");
+        Console.WriteLine("GenericClass, Example 2 combine int arrays");
 
         MyList<int> listInts1 = new();
         MyList<int> listInts2 = new();
@@ -48,5 +48,24 @@ public static class GenericClass
             
         //Console.WriteLine($"cory string {combinedLists.CoryString(combinedLists)}");
 
+    }
+
+    public static void Example3()
+    {
+        Console.WriteLine("GenericClass, Example 2 combine string arrays");
+
+        MyList<string> liststrings1 = new();
+        MyList<string> liststrings2 = new();
+
+        liststrings1.Add("Pear");
+        liststrings1.Add("Grape");
+        liststrings1.Add("Coconut");
+
+        liststrings2.Add("Pine");
+        liststrings2.Add("Oak");
+        liststrings2.Add("Maple");
+
+        MyList<string> combinedLists = liststrings1 + liststrings2;
+        Console.WriteLine($"tostring {combinedLists.ToString()}");
     }
 }

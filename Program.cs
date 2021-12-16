@@ -14,3 +14,4 @@ CompareableInterface.Example1();
 
 GenericClass.Example1();
 GenericClass.Example2();
+GenericClass.Example3();
