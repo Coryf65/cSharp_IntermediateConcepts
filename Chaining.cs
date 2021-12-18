@@ -14,7 +14,21 @@ public static class Chaining
         p += Print;
         p += Print;
         p += PrintTwice;
+
+        // we can also remove a method from the chain
+        p -= PrintTwice; // this will be the last instance of it
+
         p("Many Prints");
+
+        Console.WriteLine("\nour list of delegates");
+        // 1 way we can check the list of delegates by looping
+        foreach (var del in p.GetInvocationList())
+        {
+            Console.WriteLine($"{del.Method}");
+        }
+
+        // or we can do this
+        Delegate[] delegates = p.GetInvocationList();
     }
 
     public static void PrintTwice(string message)
