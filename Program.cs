@@ -19,3 +19,4 @@ GenericClass.Example3();
 Delegates.Example1();
 
 Chaining.Example1();
+ChainingTwo.Example1();
