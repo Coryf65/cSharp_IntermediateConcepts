@@ -14,12 +14,16 @@ public static class Delegates
         // we don't have to make many methods we can use delegates
         List<string> lessFive = NamesFilter(names, LessThanFive); // using the Function name
         List<string> moreFive = NamesFilter(names, MoreThanFive); // using the Function name
+        List<string> moreFiveLambda = NamesFilter(names, item => item.Length > 5); // using a Lambda Expression
 
         Console.WriteLine("Creating delegate using less than 5 filter");
         Console.WriteLine(string.Join(", ", lessFive));
 
         Console.WriteLine("Creating delegate using more than 5 filter");
         Console.WriteLine(string.Join(", ", moreFive));
+
+        Console.WriteLine("using a lambda, more than 5");
+        Console.WriteLine(string.Join(", ", moreFiveLambda));
     }
 
     public static bool LessThanFive(string name)
