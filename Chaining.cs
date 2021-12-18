@@ -13,12 +13,18 @@ public static class Chaining
         // but we can also add many methods into the delegate
         p += Print;
         p += Print;
-        p += Print;
+        p += PrintTwice;
         p("Many Prints");
+    }
+
+    public static void PrintTwice(string message)
+    {
+        Console.WriteLine($"{message} PrintTwice()");
+        Console.WriteLine($"{message} PrintTwice()");
     }
 
     public static void Print(string message)
     {
-        Console.WriteLine($"{message}");
+        Console.WriteLine($"{message} Print()");
     }
 }
