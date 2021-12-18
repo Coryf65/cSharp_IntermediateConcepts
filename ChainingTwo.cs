@@ -1,6 +1,10 @@
+using System;
+using System.Collections.Generic;
+
 public static class ChainingTwo
 {
     public delegate bool CheckLengthOfString(string message);
+    public delegate int GetLengths(string message);
 
     public static void Example1()
     {
@@ -25,6 +29,28 @@ public static class ChainingTwo
         Console.WriteLine("\nor this way using a lambda");
         List<bool> results2 = d.GetInvocationList().Select(d => (bool)d.DynamicInvoke("Message")).ToList();
         Console.WriteLine(string.Join(", ", results2));
+
+        Console.WriteLine("\nbuild a function for ease");
+        List<bool> results3 = GatherAllMethodsOfDel<bool>(d, "Function!");
+        Console.WriteLine(string.Join(", ", results3));
+
+        GetLengths g = x => x.Length;
+        g += x => x.Length + 1;
+        g += x => x.Length + 2;
+
+        Console.WriteLine("\nnow using an int");
+        List<int> results4 = GatherAllMethodsOfDel<int>(g, "Some words");
+        Console.WriteLine(string.Join(", ", results4));
+    }
+
+    // replacing the long call into a mehtod
+    // d.GetInvocationList().Select(d => (bool)d.DynamicInvoke("Message")).ToList();
+    public static List<T> GatherAllMethodsOfDel<T>(Delegate del, object parameter = null)
+    {
+        List<T> result = del.GetInvocationList()
+                            .Select(d => (T)d.DynamicInvoke(parameter))
+                            .ToList();
+        return result;
     }
 
     public static bool LessThanFive(string name)
