@@ -17,3 +17,5 @@ GenericClass.Example2();
 GenericClass.Example3();
 
 Delegates.Example1();
+
+Chaining.Example1();
